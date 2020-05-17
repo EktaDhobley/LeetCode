@@ -1,0 +1,10 @@
+public int kthGrammar(int N, int K) {
+       return helper(N, K - 1);
+    }
+    
+    public int helper(int N, int K) {
+         if (N == 1 && K == 0) {
+            return 0;
+        }
+        return Math.abs(helper(N - 1, K / 2) - K % 2);
+    }
