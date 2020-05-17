@@ -1,7 +1,5 @@
 # LeetCode #Recursion
-class Solution {
-   
-   
+
    public int maxDepth(TreeNode root) {
         if(root==null) 
         {
@@ -21,4 +19,4 @@ class Solution {
         
         return Math.max((getHeight(n.left,height+1)), getHeight(n.right,height+1));
     }
-}
+
