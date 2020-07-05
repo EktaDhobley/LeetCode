@@ -1,0 +1,23 @@
+class Solution {
+    public int nthUglyNumber(int n) {
+      int  ugly[]= new int[n];
+        ugly[0]=1;
+        int count=1;
+        int i=0,j=0,k=0;
+        
+        while(count<n){
+        int temp1= ugly[i]*2;
+        int temp2= ugly[j]*3;
+        int temp3= ugly[k]*5;
+        
+        int temp= Math.min(temp1, Math.min(temp2, temp3));
+        
+        if(temp==temp1) i++;
+        if(temp==temp2) j++;
+        if(temp==temp3) k++;
+        ugly[count++] = temp;
+        }
+        return ugly[n-1];
+        
+    }
+}
