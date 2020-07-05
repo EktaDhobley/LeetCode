@@ -1,0 +1,9 @@
+class Solution {
+    public int hammingDistance(int x, int y) {
+        
+        int z= x^y; ////XOR
+        
+        String k= Integer.toBinaryString(z);
+        return k.replaceAll("0","").length(); //count the number of 1s, to know the difference
+    }
+}
