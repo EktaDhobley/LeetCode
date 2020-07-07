@@ -5,12 +5,12 @@ class Solution {
         boolean done = false;
         for (int i = digits.length - 1; i > -1; i--) {
             
-            // if the current digit == 9 put zero at that position.
+            // if the current digit is 9
             if (digits[i] == 9) {
                 digits[i] = 0;
             }
             
-            // if the current digit != 9 increment by one and break;
+            // if current digit is not 9
             else {
                 digits[i] += 1;
                 done = true;
@@ -22,7 +22,7 @@ class Solution {
             return digits;
         }
 		
-        // in case digits was full of nines (e.g. 9, or 99)
+        // all nines (e.g. 9, or 99)
         // return a new array with digits.length + 1 with a leading one (e.g. 100).
 		else {
             int[] output = new int[digits.length + 1];
